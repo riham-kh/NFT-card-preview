@@ -1,0 +1,108 @@
+html {
+  background-color: #0D192C;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box; }
+
+.container {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 24px; }
+  .container .card {
+    background-color: #15263F;
+    box-shadow: 0 25px 50px #00000009;
+    border-radius: 15px;
+    padding: 24px 24px 32px 24px;
+    max-width: 350px; }
+    .container .card__img {
+      margin-bottom: 24px;
+      position: relative; }
+      .container .card__img img {
+        border-radius: 8px;
+        width: 100%;
+        height: auto;
+        vertical-align: bottom; }
+      .container .card__img .overlay {
+        position: absolute;
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        top: 0%;
+        left: 0%;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 255, 248, 0.5);
+        opacity: 0;
+        transition: all 0.2s ease-in-out; }
+        .container .card__img .overlay:hover {
+          opacity: 1; }
+        .container .card__img .overlay img {
+          width: 48px;
+          height: 48px; }
+    .container .card__title {
+      font-size: 22px;
+      color: white;
+      margin-bottom: 16px;
+      font-weight: 600; }
+      .container .card__title p:hover {
+        color: #00FFF8;
+        cursor: pointer; }
+    .container .card__description {
+      font-size: 18px;
+      color: #8BACD9;
+      margin-bottom: 24px;
+      font-weight: 400; }
+    .container .card__pricing {
+      display: flex;
+      justify-content: space-between; }
+      .container .card__pricing .price,
+      .container .card__pricing .time {
+        display: flex;
+        align-items: center; }
+      .container .card__pricing .price p {
+        color: #00FFF8;
+        font-weight: 600;
+        margin: 0px;
+        margin-left: 6px; }
+      .container .card__pricing .time p {
+        font-size: 16px;
+        color: #8BACD9;
+        margin: 0px;
+        margin-left: 4px; }
+    .container .card__footer {
+      margin: 0px;
+      margin-top: 24px;
+      padding-top: 16px;
+      display: flex;
+      align-items: center;
+      border-top: 1px solid #2E405A; }
+      .container .card__footer .round-img {
+        margin-right: 16px; }
+        .container .card__footer .round-img img {
+          height: 33px;
+          width: 33px;
+          border: 1px solid white;
+          border-radius: 50%;
+          vertical-align: bottom; }
+      .container .card__footer .caption-text {
+        color: #8BACD9; }
+        .container .card__footer .caption-text .p--white {
+          color: white;
+          margin-left: 5px; }
+          .container .card__footer .caption-text .p--white:hover {
+            color: #00FFF8;
+            cursor: pointer; }

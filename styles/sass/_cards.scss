@@ -1,0 +1,130 @@
+.container {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 24px;
+
+  .card {
+    background-color: $dark-blue-800;
+    box-shadow: 0 25px 50px #00000009;
+    border-radius: 15px;
+    padding: 24px 24px 32px 24px;
+    max-width: 350px;
+
+    &__img {
+      margin-bottom: 24px;
+      position: relative;
+      img {
+        border-radius: 8px;
+        width: 100%;
+        height: auto;
+        vertical-align: bottom;
+      }
+
+      .overlay {
+        position: absolute;
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        top: 0%;
+        left: 0%;
+        height: 100%;
+        width: 100%;
+        background-color: transparentize($cyan, 0.5);
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        img {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 22px;
+      color: white;
+      margin-bottom: 16px;
+      font-weight: 600;
+
+      p:hover {
+        color: $cyan;
+        cursor: pointer;
+      }
+    }
+
+    &__description {
+      font-size: 18px;
+      color: $soft-blue;
+      margin-bottom: 24px;
+      font-weight: 400;
+    }
+
+    &__pricing {
+      display: flex;
+      justify-content: space-between;
+
+      .price,
+      .time {
+        display: flex;
+        align-items: center;
+      }
+
+      .price p {
+        color: $cyan;
+        font-weight: 600;
+        margin: 0px;
+        margin-left: 6px;
+      }
+
+      .time p {
+        font-size: 16px;
+        color: $soft-blue;
+        margin: 0px;
+        margin-left: 4px;
+      }
+    }
+
+    &__footer {
+      margin: 0px;
+      margin-top: 24px;
+      padding-top: 16px;
+      display: flex;
+      align-items: center;
+      border-top: 1px solid $dark-gray;
+
+      .round-img {
+        margin-right: 16px;
+
+        img {
+          height: 33px;
+          width: 33px;
+          border: 1px solid white;
+          border-radius: 50%;
+          vertical-align: bottom;
+        }
+      }
+
+      .caption-text {
+        color: $soft-blue;
+
+        .p--white {
+          color: white;
+          margin-left: 5px;
+
+          &:hover {
+            color: $cyan;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
